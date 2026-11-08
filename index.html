@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://images.openfoodfacts.org https://static.openfoodfacts.org https://images.openfoodfacts.net https://static.openfoodfacts.net; font-src 'self' data:; connect-src 'self' https:; media-src 'self' blob:; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'" />
+    <meta name="referrer" content="no-referrer" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <title>Tellerwerk</title>
+    <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
+    <style id="expo-reset">
+      /* These styles make the body full-height */
+      html,
+      body {
+        height: 100%;
+      }
+      /* These styles disable body scrolling if you are using <ScrollView> */
+      body {
+        overflow: hidden;
+      }
+      /* These styles make the root element full-height */
+      #root {
+        display: flex;
+        height: 100%;
+        flex: 1;
+      }
+    </style>
+  <meta name="theme-color" content="#EEF2E5">
+<link rel="icon" href="/favicon.ico"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Tellerwerk" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="theme-color" content="#EEF2E5" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#17121B" media="(prefers-color-scheme: dark)" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <script src="/splash.js"></script>
+    <style>
+      :root { --op-bg: #EEF2E5; --op-accent: #9C2F62; --op-leaf: #5E9A3B; --op-face: #FFF7FB; --op-text: #2A1F2D; --op-track: rgba(156, 47, 98, 0.16); }
+      @media (prefers-color-scheme: dark) { :root { --op-bg: #17121B; --op-accent: #E26A9E; --op-leaf: #8CC46A; --op-face: #1B1220; --op-text: #F6EEF4; --op-track: rgba(226, 106, 158, 0.2); } }
+      html, body { background: var(--op-bg); overscroll-behavior: none; -webkit-tap-highlight-color: transparent; }
+      body { -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; -webkit-text-size-adjust: 100%; }
+      input, textarea { -webkit-user-select: text; user-select: text; }
+      /* Start screen: shown from the first paint until the app has read its data (startScreenDone). */
+      #op-splash { position: fixed; inset: 0; z-index: 2147483647; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; background: var(--op-bg); transition: opacity 220ms ease-out; }
+      #op-splash.op-hide { opacity: 0; pointer-events: none; }
+      #op-splash .op-name { font: 800 26px/1.1 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; letter-spacing: -0.02em; color: var(--op-text); }
+      #op-splash .op-bar { width: 120px; height: 4px; border-radius: 2px; overflow: hidden; background: var(--op-track); }
+      #op-splash .op-bar span { display: block; width: 40%; height: 100%; border-radius: 2px; background: var(--op-accent); animation: op-slide 1.1s ease-in-out infinite; }
+      #op-splash .op-sprout { transform-origin: 60px 62px; animation: op-grow 700ms cubic-bezier(.2,.9,.3,1.3) both, op-sway 2.6s ease-in-out 700ms infinite; }
+      #op-splash .op-bowl { animation: op-pop 500ms cubic-bezier(.2,.9,.3,1.2) both; transform-origin: 60px 90px; }
+      @keyframes op-slide { 0% { transform: translateX(-100%); } 100% { transform: translateX(250%); } }
+      @keyframes op-grow { from { transform: scale(0.2); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+      @keyframes op-sway { 0%, 100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
+      @keyframes op-pop { from { transform: scale(0.85); } to { transform: scale(1); } }
+      @media (prefers-reduced-motion: reduce) { #op-splash * { animation: none !important; } #op-splash .op-bar span { width: 100%; opacity: 0.5; } }
+      .op-still #op-splash * { animation: none !important; } .op-still #op-splash .op-bar span { width: 100%; opacity: 0.5; }
+    </style>
+    <script src="/register-sw.js" defer></script>
+    <link rel="preload" as="script" href="/_expo/static/js/web/_layout-a0aac517fd452dcfd9b8dcfcc1897cc1.js" />
+    <link rel="preload" as="script" href="/_expo/static/js/web/_layout-bbaf12598641e46b2bcf9c2b976e624d.js" />
+    <link rel="preload" as="script" href="/_expo/static/js/web/index-5e0c7f60e1ca910937236a9892113c9c.js" />
+    <link rel="preload" as="font" type="font/ttf" crossorigin href="/assets/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Ionicons.b4eb097d35f44ed943676fd56f6bdc51.ttf" />
+    <link rel="preload" as="font" type="font/ttf" crossorigin href="/assets/node_modules/@expo-google-fonts/bricolage-grotesque/600SemiBold/BricolageGrotesque_600SemiBold.e5b5fc505484ff3ca24da73cba67c660.ttf" />
+    <link rel="preload" as="font" type="font/ttf" crossorigin href="/assets/node_modules/@expo-google-fonts/bricolage-grotesque/800ExtraBold/BricolageGrotesque_800ExtraBold.5bfb4fa1f8907c768231d97bc27e8df9.ttf" />
+    <link rel="preload" as="font" type="font/ttf" crossorigin href="/assets/node_modules/@expo-google-fonts/figtree/400Regular/Figtree_400Regular.fde4a0ff6b61f88efd09f91f41c9a6da.ttf" />
+    <link rel="preload" as="font" type="font/ttf" crossorigin href="/assets/node_modules/@expo-google-fonts/figtree/500Medium/Figtree_500Medium.0493473149844cee7b601ff24ef1479d.ttf" />
+    <link rel="preload" as="font" type="font/ttf" crossorigin href="/assets/node_modules/@expo-google-fonts/figtree/600SemiBold/Figtree_600SemiBold.0aea8911a39371620ecd59ab2a49e642.ttf" />
+    <link rel="preload" as="font" type="font/ttf" crossorigin href="/assets/node_modules/@expo-google-fonts/figtree/700Bold/Figtree_700Bold.c35c3ee5c1bab1acfe1e0d71549dd501.ttf" />
+    <link rel="preload" as="font" type="font/ttf" crossorigin href="/assets/node_modules/@expo-google-fonts/space-grotesk/600SemiBold/SpaceGrotesk_600SemiBold.b7bae4f584fc5d817de4178708946eb0.ttf" />
+    <link rel="preload" as="font" type="font/ttf" crossorigin href="/assets/node_modules/@expo-google-fonts/space-grotesk/700Bold/SpaceGrotesk_700Bold.52e5e29a7805a81bac01a170e45d103d.ttf" />
+</head>
+
+  <body>
+    <div id="op-splash" role="status" aria-live="polite" aria-label="Tellerwerk is starting">
+      <svg width="112" height="112" viewBox="0 0 120 120" aria-hidden="true">
+        <g transform="translate(8.4 8) scale(0.86)">
+          <g class="op-sprout">
+            <path d="M60 66 C60 52 57 44 60 33" stroke="var(--op-leaf)" stroke-width="7" stroke-linecap="round" fill="none" />
+            <path d="M59 45 C40 46 25 34 23 15 C43 14 58 27 59 45 Z" fill="var(--op-leaf)" />
+            <path d="M61 38 C77 36 93 22 97 4 C77 3 62 18 61 38 Z" fill="var(--op-leaf)" opacity="0.75" />
+          </g>
+          <g class="op-bowl">
+            <path d="M12 66 H108 A48 48 0 0 1 12 66 Z" fill="var(--op-accent)" />
+            <rect x="8" y="59" width="104" height="13" rx="6.5" fill="var(--op-accent)" />
+            <path d="M39 87 Q46 79 53 87" stroke="var(--op-face)" stroke-width="5" stroke-linecap="round" fill="none" />
+            <path d="M67 87 Q74 79 81 87" stroke="var(--op-face)" stroke-width="5" stroke-linecap="round" fill="none" />
+            <path d="M49 94 H71 Q70 107 60 107 Q50 107 49 94 Z" fill="var(--op-face)" />
+          </g>
+        </g>
+      </svg>
+      <div class="op-name">Tellerwerk</div>
+      <div class="op-bar"><span></span></div>
+    </div>
+    <!-- Use static rendering with Expo Router to support running without JavaScript. -->
+    <noscript> You need to enable JavaScript to run this app. </noscript>
+    <!-- The root element for your Expo app. -->
+    <div id="root"></div>
+  <script src="/_expo/static/js/web/__expo-metro-runtime-8c088df87a31e4e6accd81c554ec290d.js" defer></script><script src="/_expo/static/js/web/__common-38f86e79f08d8036ef1106db2bd036af.js" defer></script><script src="/_expo/static/js/web/entry-2621c0d4cf5e3760e92f648dfbb0d007.js" defer></script>
+</body>
+</html>
